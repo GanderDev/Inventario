@@ -5,7 +5,7 @@ using UnityEngine;
 public class MouseAct : MonoBehaviour
 {
 
-    //coloque esse script como base de um script(exemplo script Door)
+    //exemple: public class Door : MouseAct
 
     protected IVTRImputs IVTRimputs;
 
@@ -16,11 +16,11 @@ public class MouseAct : MonoBehaviour
 
     }
 
-    /// <summary> Click é chamado pelo MouseInteract </summary>
+    /// <summary> This function is called by MouseInteract </summary>
     /// 
-    /// <param name="IDItemSelected"></param> ID di ItemSelecionado
+    /// <param name="IDItemSelected"></param> Item Selected ID
     /// 
-    /// <param name="ListPositionSelected"></param> Posição do Item na Lista
+    /// <param name="ListPositionSelected"></param> Item Position in list
     /// 
     public virtual void Click(int IDItemSelected, int ListPositionSelected = 0 ) { }
 

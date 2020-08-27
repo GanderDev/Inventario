@@ -5,19 +5,19 @@ public class ItemSelected : MonoBehaviour
 
     public MouseInteract MouseInte;
 
-    /// <summary> Move um item para um slot vazio </summary>
+    /// <summary> Move a Item to empty slot </summary>
     /// 
-    /// <param name="SlotColider"></param> É o colider identificado no Raycast do MouseInteract
+    /// <param name="SlotColider"></param> is a colider took by raycast in MouseInteract
     /// 
-    /// <param name="ListItemSprite"></param> Lista de Sprites de Item do IVTRGraphic
+    /// <param name="ListItemSprite"></param> List of Item Sprites ( IVTRGraphic )
     /// 
-    /// <param name="ListItemSCOBJ"></param> Lista de items do IVTRImputs
+    /// <param name="ListItemSCOBJ"></param> List of item ( IVTRImputs )
     /// 
-    /// <param name="IDSelected"></param> ID do Item que está selecionado
+    /// <param name="IDSelected"></param> Item selected ID
     /// 
-    /// <param name="PreviuosSlotPosition"></param> Posição do Item que está selecionado
+    /// <param name="PreviuosSlotPosition"></param> previous slot position
     /// 
-    /// <returns> Ele retorna um Vector2 que é (Proxima Posição do Item selecionado, ID do Item Selecionado) </returns>
+    /// <returns> This function return a vector2( Next slot position, Item selected ID )</returns>
     /// 
     public Vector2 SelectItem(Collider2D SlotColider, SpriteRenderer[] ListItemSprite, ItemsSCOBJ[] ListItemSCOBJ, int IDSelected,int PreviuosSlotPosition)
     {
@@ -40,14 +40,14 @@ public class ItemSelected : MonoBehaviour
         if (ListItemSCOBJ[NextSlotPosition].ID == 0)
         {
 
-            if (IDSelected == 0)//se ele n estiver selecionando nenhum item 
+            if (IDSelected == 0)//if dont have any Item Selected
             {
 
                 MouseInte.IVTRimputs.Grafic.ItemSlotUpdate(NextSlotPosition);
                 return new Vector2(0, 0);
 
             }
-            else//se tiver item selecionado e o proximo slot estiver livre ele move
+            else//if have any item selected and the next slot are empty
             {
 
                 MouseInte.IVTRimputs.ChangeItemSlotPosition(ListItemSCOBJ[PreviuosSlotPosition], NextSlotPosition, PreviuosSlotPosition);
@@ -56,7 +56,7 @@ public class ItemSelected : MonoBehaviour
             }
             
         }
-        else//se o proximo slot tiver um item, ele so altera a seleção
+        else//if the next slot have any item
         {
 
             MouseInte.IVTRimputs.Grafic.ItemSlotUpdate(NextSlotPosition);

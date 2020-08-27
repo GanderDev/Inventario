@@ -7,9 +7,9 @@ public class IVTRGraphic : MonoBehaviour
 
     public Sprite ItemSlotNome, ItemSlotSelected;
 
-    /// <summary> Atuliza todos os srpites dos items </summary>
+    /// <summary> Updates all Item's sprites </summary>
     /// 
-    /// <param name="Itemsobj"></param> Lista de itens no inventario(originado no IVTRImputs)
+    /// <param name="Itemsobj"></param> List of items in inventory(originado no IVTRImputs)
     /// 
     public void ItemSpriteUpdate(ItemsSCOBJ[] Itemsobj)
     {
@@ -23,17 +23,17 @@ public class IVTRGraphic : MonoBehaviour
 
     }
 
-    /// <summary> Atualiza todos os sprites dos slots </summary>
+    /// <summary> Updates all slot's sprite </summary>
     /// 
-    /// <param name="PosiçãoDaSelecao"></param> 
+    /// <param name="Selectposition"></param>
     /// 
-    public void ItemSlotUpdate(int PosiçãoDaSelecao)
+    public void ItemSlotUpdate(int Selectposition)
     {
 
         for (int i = 0; SpriteRendererItemSlot.Length > i; i++)
         {
 
-            if (PosiçãoDaSelecao == i)
+            if (Selectposition == i)
             {
 
                 SpriteRendererItemSlot[i].sprite = ItemSlotSelected;

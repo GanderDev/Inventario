@@ -19,6 +19,8 @@ public class MouseInteract : MonoBehaviour
 
     }
 
+    /// <summary> ClickCheck () checks if something was hit by a mouse click </summary>
+    /// 
     void clickCheck()
     {
 

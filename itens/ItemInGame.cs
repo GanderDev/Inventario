@@ -9,10 +9,12 @@ public class ItemInGame : MouseAct
 
     public override void Click(int ID = 0, int Arrayposition = 0)
     {
-
         
-        if (IVTRimputs.AddItem(ItemSCOBJ)) {
+        if (IVTRimputs.AddItem(ItemSCOBJ)) 
+        {
+
             Destroy(gameObject);
+
         }
 
     }
