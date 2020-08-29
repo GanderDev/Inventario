@@ -2,7 +2,7 @@
 
 public class IVTRImputs : MonoBehaviour
 {
-
+    
     public ItemsSCOBJ[] ItemsOBJ;
 
     public ItemsSCOBJ Nothing;
@@ -10,6 +10,15 @@ public class IVTRImputs : MonoBehaviour
     public IVTRGraphic Grafic;
 
     public ItemListID ItemListID;
+
+    private void Start()
+    {
+
+        if (ItemsOBJ.Length == 0){ Debug.LogError("The array ItemsOBJ is empty "); return; }
+
+        Grafic.ItemSpriteUpdate(ItemsOBJ);
+
+    }
 
     /// <summary> AddItem() this function is use to add a Item to Inventory Ultilizando para Adicionar um item a um Slot no inventario </summary>
     /// 
@@ -30,6 +39,7 @@ public class IVTRImputs : MonoBehaviour
             }else if((i + 1) == ItemsOBJ.Length)
             {
 
+                Debug.LogWarning("Inventory Full");
                 return false;
 
             }

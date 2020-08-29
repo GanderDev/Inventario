@@ -3,7 +3,7 @@
 public class IVTRGraphic : MonoBehaviour
 {
 
-    public SpriteRenderer[] SpriteRendererItemSlot, SpriteRendererItemSprite;
+    public SpriteRenderer[] SpriteRendererItemSlot,  SpriteRendererItemSprite;
 
     public Sprite ItemSlotNome, ItemSlotSelected;
 

@@ -4,7 +4,7 @@ public class MouseInteract : MonoBehaviour
 {
     public IVTRImputs IVTRimputs;
     public ItemSelected ItemSelect;
-    public int ItemSelectedID, OBJSelectePosition; 
+    protected int ItemSelectedID, OBJSelectePosition; 
 
     // Update is called once per frame
     void Update()
